@@ -37,7 +37,7 @@
     keymaps = [
       {
         mode = "n";
-        key = "<leader>tt";
+        key = "<leader>Tt";
         action = "<cmd>lua require('neotest').run.run(vim.fn.expand '%')<CR>";
         options = {
           desc = "Run File";
@@ -46,7 +46,7 @@
       }
       {
         mode = "n";
-        key = "<leader>tT";
+        key = "<leader>TT";
         action = "<cmd>lua require('neotest').run.run(vim.loop.cwd())<CR>";
         options = {
           desc = "Run All Test Files";
@@ -55,7 +55,7 @@
       }
       {
         mode = "n";
-        key = "<leader>tr";
+        key = "<leader>Tr";
         action = "<cmd>lua require('neotest').run.run()<CR>";
         options = {
           desc = "Run Nearest";
@@ -64,7 +64,7 @@
       }
       {
         mode = "n";
-        key = "<leader>td";
+        key = "<leader>Td";
         action = "<cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>";
         options = {
           desc = "Run Nearest with debugger";
@@ -73,7 +73,7 @@
       }
       {
         mode = "n";
-        key = "<leader>ts";
+        key = "<leader>Ts";
         action = "<cmd>lua require('neotest').summary.toggle()<CR>";
         options = {
           desc = "Toggle Summary";
@@ -82,7 +82,7 @@
       }
       {
         mode = "n";
-        key = "<leader>to";
+        key = "<leader>To";
         action = "<cmd>lua require('neotest').output.open{ enter = true, auto_close = true }<CR>";
         options = {
           desc = "Show Output";
@@ -91,7 +91,7 @@
       }
       {
         mode = "n";
-        key = "<leader>tO";
+        key = "<leader>TO";
         action = "<cmd>lua require('neotest').output_panel.toggle()<CR>";
         options = {
           desc = "Toggle Output Panel";
@@ -100,7 +100,7 @@
       }
       {
         mode = "n";
-        key = "<leader>tS";
+        key = "<leader>TS";
         action = "<cmd>lua require('neotest').run.stop()<CR>";
         options = {
           desc = "Stop";

@@ -89,6 +89,7 @@
             mode = "n";
             group = "+search";
           }
+
           {
             __unkeyed-1 = "<leader><Tab>";
             mode = "n";
@@ -97,6 +98,13 @@
 
           {
             __unkeyed-1 = "<leader>t";
+            mode = "n";
+            group = "+term";
+            icon = "";
+          }
+
+          {
+            __unkeyed-1 = "<leader>T";
             mode = "n";
             group = "+test";
           }

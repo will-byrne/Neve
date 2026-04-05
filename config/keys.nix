@@ -7,58 +7,30 @@
   config = lib.mkIf config.keys.enable {
     globals.mapleader = " ";
     keymaps = [
-      # Disable arrow keys
+      # Terminals
       {
-        mode = [
-          "n"
-          "i"
-        ];
-        key = "<Up>";
-        action = "<Nop>";
-        options = {
-          silent = true;
-          noremap = true;
-          desc = "Disable Up arrow key";
-        };
+        mode = "t";
+        key = "<C-H>";
+        action = "<Cmd>wincmd h<CR>";
+        options.desc = "Terminal left window navigation";
       }
       {
-        mode = [
-          "n"
-          "i"
-        ];
-        key = "<Down>";
-        action = "<Nop>";
-        options = {
-          silent = true;
-          noremap = true;
-          desc = "Disable Down arrow key";
-        };
+        mode = "t";
+        key = "<C-J>";
+        action = "<Cmd>wincmd j<CR>";
+        options.desc = "Terminal down window navigation";
       }
       {
-        mode = [
-          "n"
-          "i"
-        ];
-        key = "<Right>";
-        action = "<Nop>";
-        options = {
-          silent = true;
-          noremap = true;
-          desc = "Disable Right arrow key";
-        };
+        mode = "t";
+        key = "<C-K>";
+        action = "<Cmd>wincmd k<CR>";
+        options.desc = "Terminal up window navigation";
       }
       {
-        mode = [
-          "n"
-          "i"
-        ];
-        key = "<Left>";
-        action = "<Nop>";
-        options = {
-          silent = true;
-          noremap = true;
-          desc = "Disable Left arrow key";
-        };
+        mode = "t";
+        key = "<C-L>";
+        action = "<Cmd>wincmd l<CR>";
+        options.desc = "Terminal right window navigation";
       }
       # Tabs
       {
