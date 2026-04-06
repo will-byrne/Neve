@@ -52,10 +52,10 @@
         [
           {
             mode = "n";
-            key = "<leader>bd";
+            key = "<leader>bc";
             action = "<cmd>bdelete<cr>";
             options = {
-              desc = "Delete buffer";
+              desc = "Close buffer";
             };
           }
 
@@ -82,7 +82,7 @@
             key = "<leader>br";
             action = "<cmd>BufferLineCloseRight<cr>";
             options = {
-              desc = "Delete buffers to the right";
+              desc = "Close buffers to the right";
             };
           }
 
@@ -91,7 +91,7 @@
             key = "<leader>bl";
             action = "<cmd>BufferLineCloseLeft<cr>";
             options = {
-              desc = "Delete buffers to the left";
+              desc = "Close buffers to the left";
             };
           }
 
@@ -100,7 +100,7 @@
             key = "<leader>bo";
             action = "<cmd>BufferLineCloseOthers<cr>";
             options = {
-              desc = "Delete other buffers";
+              desc = "Close other buffers";
             };
           }
 
@@ -118,7 +118,7 @@
             key = "<leader>bP";
             action = "<Cmd>BufferLineGroupClose ungrouped<CR>";
             options = {
-              desc = "Delete non-pinned buffers";
+              desc = "Close non-pinned buffers";
             };
           }
         ]
