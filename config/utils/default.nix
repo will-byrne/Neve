@@ -44,7 +44,7 @@
     nvim-autopairs.enable = lib.mkDefault true;
     colorizer.enable = lib.mkDefault true;
     nvim-surround.enable = lib.mkDefault true;
-    nvterm.enable = lib.mkDefault true;
+    nvterm.enable = lib.mkDefault false;
     oil.enable = lib.mkDefault true;
     persistence.enable = lib.mkDefault true;
     plenary.enable = lib.mkDefault true;
