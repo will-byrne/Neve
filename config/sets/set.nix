@@ -56,6 +56,10 @@
         "noinsert"
       ]; # mostly just for cmp
 
+      # Set spellcheck language and enable spellchecking
+      spell = true;
+      spelllang = "en";
+
       # Enable persistent undo history
       swapfile = false;
       backup = false;
