@@ -1,5 +1,17 @@
-{ lib, config, ... }:
 {
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
+  extraPackages = with pkgs; [
+    fd
+    nixfmt
+    stylua
+    prettierd
+  ];
+
   # Import all your configuration modules here
   imports = [
     ./bufferlines
@@ -11,7 +23,6 @@
     ./keys.nix
     ./languages
     ./lsp
-    ./none-ls
     ./pluginmanagers
     ./sets
     ./snippets
@@ -31,7 +42,6 @@
   keys.enable = true;
   languages.enable = true;
   lsp.enable = lib.mkDefault true;
-  none-ls.enable = lib.mkDefault false;
   sets.enable = lib.mkDefault true;
   pluginmanagers.enable = lib.mkDefault true;
   snippets.enable = lib.mkDefault true;
