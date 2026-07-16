@@ -5,6 +5,11 @@
   };
   config = lib.mkIf config.conform.enable {
 
+    extraConfigLua = ''
+      -- Start with autoformat disabled; use :FormatToggle or :FormatToggle! to enable it.
+      vim.g.disable_autoformat = true
+    '';
+
     plugins.conform-nvim = {
       enable = true;
       settings = {
