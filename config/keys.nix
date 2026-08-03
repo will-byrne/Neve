@@ -208,6 +208,16 @@
       # Toggle
       {
         mode = "n";
+        key = "<leader>a";
+        action = "<cmd>Alpha<cr>";
+        options = {
+          silent = true;
+          desc = "Open Alpha dashboard";
+        };
+      }
+
+      {
+        mode = "n";
         key = "<leader>ul";
         action = ":lua ToggleLineNumber()<cr>";
         options = {

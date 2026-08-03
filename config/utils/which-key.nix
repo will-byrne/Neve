@@ -79,6 +79,13 @@
           }
 
           {
+            __unkeyed-1 = "<leader>a";
+            mode = "n";
+            group = "+alpha";
+            icon = "󰀫";
+          }
+
+          {
             __unkeyed-1 = "<leader>q";
             mode = "n";
             group = "+quit/session";
@@ -100,7 +107,7 @@
             __unkeyed-1 = "<leader>t";
             mode = "n";
             group = "+term";
-            icon = "";
+            icon = "󰀫";
           }
 
           {
