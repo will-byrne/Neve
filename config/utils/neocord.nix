@@ -6,6 +6,7 @@
   config = lib.mkIf config.neocord.enable {
     plugins.neocord = {
       enable = true;
+      lazyLoad.settings.event = "DeferredUIEnter";
       settings = {
         auto_update = true;
         blacklist = [ ];
@@ -14,7 +15,7 @@
         editing_text = "Editing...";
         enable_line_number = true;
         logo = "https://repository-images.githubusercontent.com/325421844/ecb73f47-cb89-4ee0-a0fd-9743c2f3569a";
-        logo_tooltip = "NixVim";
+        logo_tooltip = "Neve";
         file_assets = null;
         file_explorer_text = "Browsing...";
         git_commit_text = "Committing changes...";

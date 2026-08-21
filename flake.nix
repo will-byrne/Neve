@@ -21,6 +21,26 @@
       nixpkgsConfig = {
         allowUnfree = true;
       };
+      stripPluginDeps = final: prev: {
+        vimPlugins =
+          prev.vimPlugins
+          // builtins.mapAttrs (
+            _: pkg:
+            pkg.overrideAttrs (old: {
+              dependencies = [ ];
+              nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ (old.dependencies or [ ]);
+            })
+          ) {
+            inherit (prev.vimPlugins)
+              telescope-fzf-native-nvim
+              telescope-ui-select-nvim
+              neotest-java
+              neotest-python
+              neotest-vitest
+              neotest-plenary
+              ;
+          };
+      };
     in
     {
       nixvimModule = config;
@@ -32,6 +52,7 @@
         pkgs = import nixpkgs {
           inherit system;
           config = nixpkgsConfig;
+          overlays = [ stripPluginDeps ];
         };
         nixvim' = nixvim.legacyPackages.${system};
         nvim = nixvim'.makeNixvimWithModule {

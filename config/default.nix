@@ -43,6 +43,7 @@
   languages.enable = true;
   lsp.enable = lib.mkDefault true;
   sets.enable = lib.mkDefault true;
+  plugins.lz-n.enable = true;
   pluginmanagers.enable = lib.mkDefault true;
   snippets.enable = lib.mkDefault true;
   statusline.enable = lib.mkDefault true;
